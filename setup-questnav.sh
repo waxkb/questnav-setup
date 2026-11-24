@@ -27,8 +27,11 @@ adb shell svc wifi disable
 
 echo "=== 4. Setting Safe Low Screen Brightness ==="
 # Set to 50 (out of 255) instead of 0 so the screen stays visible across reboots
-adb shell settings put system screen_brightness 50
-adb shell cmd display set-brightness 0.2
+# adb shell settings put system screen_brightness 50
+# adb shell cmd display set-brightness 0.2
+# Lowest is almost perfectly usable
+adb shell settings put system screen_brightness 1
+adb shell cmd display set-brightness 0.004
 
 echo "=== 5. Installing & Starting QuestNavKeepAwake ==="
 adb install -r -g app-debug.apk
