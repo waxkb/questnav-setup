@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export NIXPKGS_ACCEPT_ANDROID_SDK_LICENSE=1
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SHELL_NIX="$SCRIPT_DIR/shell.nix"
 KEEPAWAKE_DIR="$SCRIPT_DIR/QuestNavKeepAwake"
